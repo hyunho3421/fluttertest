@@ -6,6 +6,7 @@ class User {
   final String release;
   final String sdkInt;
   final String grant;
+  final String brand;
 
   User(
       {required this.name,
@@ -14,7 +15,8 @@ class User {
       required this.manufacturer,
       required this.release,
       required this.sdkInt,
-      required this.grant});
+      required this.grant,
+      required this.brand});
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
@@ -24,7 +26,8 @@ class User {
         manufacturer: json['manufacturer'],
         release: json['release'],
         sdkInt: json['sdkInt'],
-        grant: json['grant']);
+        grant: json['grant'],
+        brand: json['brand']);
   }
 
   Map<String, dynamic> toJson() {
@@ -34,7 +37,9 @@ class User {
       'model': model,
       'manufacturer': manufacturer,
       'release': release,
-      'sdkInt': sdkInt
+      'sdkInt': sdkInt,
+      'grant': grant,
+      'brand': brand
     };
   }
 }
